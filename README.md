@@ -74,14 +74,14 @@ Thank you [Medium user CMDS for posting the solution in the response section](ht
 
 You have to find the current list id that you are rending.
 instead of 
-```
+```js
 const lists = this.state.lists;
 lists[id-1] = {id, title, excerpt}
 this.setState(() => ({
   ...
 ```
 Change to: 
-```
+```js
 const index = lists.findIndex(list => list.id === id);
 lists[index] = {id, title, excerpt}
 this.setState(() => ({ ...
