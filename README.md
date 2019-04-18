@@ -8,18 +8,19 @@ Credit: [ReactJS + Ruby on Rails API + Heroku App Tutorial by Bruno Boehm](https
 Issues I ran into following the tutorial and how to solve them: 
 
 ### 1. Step 2. Create the React Client
-Received an error after setting the proxy as described in `package.json` with 
-```json
+Got an error after setting the proxy as described in `package.json` with 
+```js
 {
-  "name": "client,
-  [...]
+  "name": "client",
+  // ...
   "proxy": {
     "/api": {
       "target": "http://localhost:3001"
     }
   },
-  [...]
-}
+  "dependencies": {
+    //...
+  }
 ```
 
 ```
@@ -27,7 +28,7 @@ When specified, "proxy" in package.json must be a string.
 Instead, the type of "proxy" was "object".
 Either remove "proxy" from package.json, or make it a string.
 ```
-It is because you are using the advanced proxy configuration in which our `proxy` is an object.
+It is because you are using the advanced proxy configuration, which your `proxy` is an object.
 
 Install the [http-proxy-middleware](https://github.com/facebook/create-react-app/issues/5103) package.(Read more: [Move advanced proxy configuration to src/setupProxy.js](https://github.com/facebook/create-react-app/issues/5103)). 
 
