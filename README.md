@@ -1,4 +1,4 @@
-# list-app with React, Rails API, and Heroku
+# List App
 
 A simple CRUD action To-Do List app with Rails API, React, and Heroku. The server-side is handled by Rails (Rails 5 introduced the [API-only mode](https://guides.rubyonrails.org/api_app.html)), which talks in JSON. The client-side is done in React, a popular frontend JavaScript framework.
 
