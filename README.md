@@ -41,7 +41,7 @@ module.exports = function(app) {
   app.use(proxy('/api', { target: 'http://localhost:3001/' }))
 }
 ```
-You goooood to API calls to the right port~
+API calls to the right port!
 
 ### 2. Step 7. Fetching API Data with Axios
 You are running into a [CORS (Cross-Origin Resource Sharing)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) error. Your Rails API is not allowed by Access-Control-Allow-Origin.
@@ -66,7 +66,9 @@ No more CORS issues!
 ### 3. Step 9-c. CR[U]D: UPDATE action
 You seem to be creating an different list with the same id upon editing.
 ```
-Warning: Encountered two children with the same key, `3`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+Warning: Encountered two children with the same key, `3`. 
+Keys should be unique so that components maintain their identity across updates. 
+Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
 ```
 Thank you [Medium user CMDS for posting the solution in the response section](https://medium.com/@brewNcode/within-the-success-response-in-editlist-id-title-excerpt-5e43bc31fc69).
 
@@ -84,6 +86,7 @@ const index = lists.findIndex(list => list.id === id);
 lists[index] = {id, title, excerpt}
 this.setState(() => ({ ...
 ```
+Updating without creating duplicate!
 
 ## Conclusion
 I hope you find this documentation helpful!
