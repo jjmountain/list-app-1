@@ -2,7 +2,7 @@
 
 A simple CRUD action To-Do List app with Rails API, React, and Heroku. The server-side is handled by Rails (Rails 5 introduced the [API-only mode](https://guides.rubyonrails.org/api_app.html)), which talks in JSON. The client-side is done in React, a popular frontend JavaScript framework.
 
-Credit: [ReactJS + Ruby on Rails API + Heroku App Tutorial](https://medium.com/@bruno_boehm/reactjs-ruby-on-rails-api-heroku-app-2645c93f0814)
+Credit: [ReactJS + Ruby on Rails API + Heroku App Tutorial by Bruno Boehm](https://medium.com/@bruno_boehm/reactjs-ruby-on-rails-api-heroku-app-2645c93f0814)
 
 ## Documentation
 Issues I ran into following the tutorial and how to solve them: 
@@ -10,6 +10,7 @@ Issues I ran into following the tutorial and how to solve them:
 ### 1. Step 2. Create the React Client
 Received an error after setting the proxy as described in `package.json` with 
 ```json
+{
   "name": "client,
   [...]
   "proxy": {
@@ -17,7 +18,8 @@ Received an error after setting the proxy as described in `package.json` with
       "target": "http://localhost:3001"
     }
   },
-  [...[
+  [...]
+}
 ```
 
 ```
