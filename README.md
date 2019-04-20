@@ -51,7 +51,7 @@ You are running into a [CORS (Cross-Origin Resource Sharing)](https://developer.
 
 We use [rack-cors](https://github.com/cyu/rack-cors) to get around this.
 
-`gem install rack-corrs`
+`gem install rack-cors`
 ```zsh
 $ bundle
 ```
