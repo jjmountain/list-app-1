@@ -49,7 +49,9 @@ API calls to the right port!
 ### 2. Step 7. Fetching API Data with Axios
 You are running into a [CORS (Cross-Origin Resource Sharing)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) error. Your Rails API is not allowed by Access-Control-Allow-Origin.
 
-`gem install [rack-cors](https://github.com/cyu/rack-cors)`
+We use [rack-cors](https://github.com/cyu/rack-cors) to get around this.
+
+`gem install rack-corrs`
 ```zsh
 $ bundle
 ```
